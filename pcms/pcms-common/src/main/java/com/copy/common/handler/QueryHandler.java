@@ -4,6 +4,7 @@ import com.copy.common.constants.Constants;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -115,7 +116,58 @@ public class QueryHandler {
 		sqlBuilder.append(sqlString);
 		return this;
 	}
-	//public
+
+	/**
+	 *
+	 * @param firstResult
+	 * @return QueryHandler
+	 */
+	public QueryHandler setFirstResult(int firstResult){
+		this.firstResult = firstResult;
+		return this;
+	}
+
+	/**
+	 *
+	 * @param maxResults
+	 * @return QueryHandler
+	 */
+	public QueryHandler setMaxResults(int maxResults){
+		this.maxResults = maxResults;
+		return this;
+	}
+	/**
+	 *
+	 * @param cacheable
+	 * @return QueryHandler
+	 */
+	public QueryHandler setCacheble(boolean cacheable){
+		this.cacheable = cacheable;
+		return this;
+	}
+
+	public QueryHandler setParameter(String key,Object value ){
+		if(null == map){
+			map = new HashMap<>();
+		}
+		map.put(key,value);
+		return this;
+	}
+	/**
+	 *
+	 * @param key
+	 * @param value
+	 * @return QueryHandler
+	 */
+	public QueryHandler setParameter(String key, Object[] value){
+		if(null == arrayMap){
+			arrayMap = new HashMap<>();
+		}
+		arrayMap.put(key,value);
+		return this;
+	}
+
+
 	/**
 	 * @param session
 	 * @param sql
@@ -147,9 +199,11 @@ public class QueryHandler {
 		}
 		return query;
 	}
+
 	public String getSql(){
 		return sqlBuilder.toString();
 	}
+
 	public String getCountSql(){
 		String sql = getSql();
 		sql = sql.substring(sql.toLowerCase().indexOf(KEYWORD_FROM));
