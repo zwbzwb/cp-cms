@@ -40,7 +40,7 @@
         <version.lucene>5.5.5</version.lucene>
         <version.jedis>2.9.0</version.jedis>
         <version.quartz>2.3.0</version.quartz>
-        <version.c3p0>0.9.5.2</version.c3p0>
+        <version.c3p0>0.9.5.4</version.c3p0>
         <!--<version.commons-logging>1.2.0</version.commons-logging>-->
     </properties>
     <dependencyManagement>
