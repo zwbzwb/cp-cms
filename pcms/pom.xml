@@ -39,7 +39,7 @@
         <version.mybatis>3.4.6</version.mybatis>
         <version.lucene>5.5.5</version.lucene>
         <version.jedis>2.9.0</version.jedis>
-        <version.quartz>2.3.0</version.quartz>
+        <version.quartz>2.3.2</version.quartz>
         <version.c3p0>0.9.5.2</version.c3p0>
         <!--<version.commons-logging>1.2.0</version.commons-logging>-->
     </properties>
