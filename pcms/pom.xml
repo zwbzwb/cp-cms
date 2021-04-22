@@ -36,7 +36,7 @@
         <version.hibernate>5.3.6.Final</version.hibernate>
         <version.hibernateSearch>5.10.4.Final</version.hibernateSearch>
         <version.freemarker>2.3.28</version.freemarker>
-        <version.mybatis>3.4.6</version.mybatis>
+        <version.mybatis>3.5.6</version.mybatis>
         <version.lucene>5.5.5</version.lucene>
         <version.jedis>2.9.0</version.jedis>
         <version.quartz>2.3.0</version.quartz>
